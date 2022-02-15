@@ -17,12 +17,14 @@
       placeholder="Dodaj zadanie i datę wykonania"
       (keyup)="0"
       #nameInput
+      [(ngModel)]="taskName"
     />
     <input 
       class="col s2 disabled" 
       type="date"
       #dateInput
       (change)="0"   
+      [(ngModel)]="taskDate"
     />
     <button 
       class="btn-floating" 

@@ -9,7 +9,9 @@ import { Task } from './task';
 export class AppComponent {
   config: { [key: string]: string} | null = null;
 
-  //taskName: string;
+  taskName = 'Sugerowane zadanie codzienne: odkurzanie';
+  taskDate = '';
+  
   tasks: Task[] = [
     {
       name: 'Siłownia',
