@@ -27,7 +27,7 @@ export class AppComponent {
     {
       name: 'Sprzątanie mieskzania',
       deadline: '2022-02-22',
-      done: false
+      done: true
     }
   ];
 
