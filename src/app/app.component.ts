@@ -9,6 +9,7 @@ import { Task } from './task';
 export class AppComponent {
   config: { [key: string]: string} | null = null;
 
+  editMode = false;
   taskName = 'Sugerowane zadanie codzienne: odkurzanie';
   taskDate = '';
 
@@ -63,5 +64,9 @@ export class AppComponent {
     this.tasks.push(task);
     this.taskName = '';
     this.taskDate = '';
+  }
+
+  switchEditMode() {
+    this.editMode = !this.editMode;
   }
 }
