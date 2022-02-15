@@ -11,7 +11,7 @@ export class AppComponent {
 
   taskName = 'Sugerowane zadanie codzienne: odkurzanie';
   taskDate = '';
-  
+
   tasks: Task[] = [
     {
       name: 'Siłownia',
@@ -50,16 +50,18 @@ export class AppComponent {
   //   this.taskName = target.value;
   // }
 
-  createTask(name: string, deadline: string){
+  createTask(){
     const task: Task = {
-      //name: this.taskName,
-      name,
+      name: this.taskName,
+      //name,
       //name: name,
       //deadline: '2022-02-14',
-      deadline,
-      //deadline: date,
+      //deadline,
+      deadline: this.taskDate,
       done: false
     };
     this.tasks.push(task);
+    this.taskName = '';
+    this.taskDate = '';
   }
 }
